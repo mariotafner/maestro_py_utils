@@ -17,11 +17,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-# Add other dependencies that your package might have
-# dependencies = [
-#     "requests>=2.20.0",
-#     "numpy",
-# ]
+
+dependencies = [
+  "pytz>=2024.2",
+]
 
 [project.urls]
 Homepage = "https://github.com/mariotafner/maestro_py_utils"
