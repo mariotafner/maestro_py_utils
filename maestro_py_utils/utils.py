@@ -126,3 +126,16 @@ def string_pad_left(string, length, char=' '):
 
 def string_pad_right(string, length, char=' '):
     return string + char * (length - len(string))
+
+def remove_duplicated_spaces(text):
+    return ' '.join(text.split())
+
+def date_weekday(date):
+    return [1,2,3,4,5,6,0][date.weekday()]
+
+def datetime_set_time(datetime, time):
+    hours, minutes, seconds = time.split(':')
+    hours = int(hours)
+    minutes = int(minutes)
+    seconds = int(seconds)
+    return datetime.replace(hour=hours, minute=minutes, second=seconds, microsecond=0)
