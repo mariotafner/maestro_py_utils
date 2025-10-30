@@ -1,3 +1,3 @@
-from .utils import MaestroUtils
+from .utils import Paestro
 
-__all__ = ['MaestroUtils']
+__all__ = ['Paestro']
