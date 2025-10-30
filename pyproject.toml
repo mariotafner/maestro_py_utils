@@ -4,8 +4,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "maestro_py_utils"
-version = "0.2.0"
+name = "paestro"
+version = "0.2.1"
 authors = [
   { name="Mario Fabre", email="admin@mariofabre.dev" },
 ]
@@ -23,4 +23,4 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mariotafner/maestro_py_utils"
+Homepage = "https://github.com/mariotafner/paestro"

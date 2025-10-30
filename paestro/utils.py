@@ -3,11 +3,11 @@ import random
 import string
 from datetime import datetime, timedelta
 
-class MaestroUtils:
+class Paestro:
     
     @staticmethod
     def test():
-        print("maestro_py_utils")
+        print("paestro")
         
     @staticmethod
     def random_id():
