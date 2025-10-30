@@ -83,7 +83,7 @@ class Paestro:
         if unit == 'datetime':
             return date + timedelta(seconds=value)
         else:
-            return date + timedelta(seconds=Utils.unitToSeconds(value, unit))
+            return date + timedelta(seconds=Paestro.unitToSeconds(value, unit))
         
     @staticmethod
     def secondsBetween(date1, date2):
