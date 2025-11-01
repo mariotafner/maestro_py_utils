@@ -162,3 +162,30 @@ class Paestro:
         minutes = int(minutes)
         seconds = int(seconds)
         return datetime.replace(hour=hours, minute=minutes, second=seconds, microsecond=0)
+    
+    @staticmethod
+    def msort(arr, key=None):
+        def compare(a, b):
+            if key is None:
+                return a < b
+            else:
+                if type(key) == list:
+                    for k in key:
+                        if a[k] < b[k]:
+                            return True
+                        elif a[k] > b[k]:
+                            return False
+                    return False
+                else:
+                    return a[key] < b[key]
+        
+        while True:
+            for i in range(len(arr)):
+                if i == 0:
+                    continue
+                
+                if (compare(arr[i], arr[i-1])):
+                    arr[i], arr[i-1] = arr[i-1], arr[i]
+                    break
+            else:
+                return arr
