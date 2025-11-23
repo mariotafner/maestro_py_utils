@@ -20,6 +20,7 @@ classifiers = [
 
 dependencies = [
   "pytz>=2024.2",
+  "pillow>=12.0.0",
 ]
 
 [project.urls]
