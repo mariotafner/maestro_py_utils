@@ -535,3 +535,43 @@ class Paestro:
         """
         with open(source_path, "rb") as file:
             return file.read()
+        
+    @staticmethod
+    def gzip_compress_bytes(bytes):
+        """
+        Compresses binary data using gzip.
+        
+        Args:
+            bytes (bytes): Binary data to be compressed.
+        
+        Returns:
+            bytes: Compressed data in gzip format.
+        """
+        if not isinstance(bytes, bytes):
+            raise TypeError("Input needs to be bytes")
+
+        bytes_buffer = io.BytesIO()
+        with gzip.GzipFile(fileobj=bytes_buffer, mode='wb') as f:
+            f.write(bytes)
+        return bytes_buffer.getvalue()
+    
+    @staticmethod
+    def gzip_decompress_bytes(compressed_bytes):
+        """
+        Decompresses gzip data to binary data.
+        
+        Args:
+            compressed_bytes (bytes): Compressed data in gzip format.
+        
+        Returns:
+            bytes: Decompressed data.
+        """
+        if not isinstance(compressed_bytes, bytes):
+            raise TypeError("Input needs to be bytes")
+
+        bytes_buffer = io.BytesIO(compressed_bytes)
+
+        with gzip.GzipFile(fileobj=bytes_buffer, mode='rb') as f:
+            decompressed_bytes = f.read()
+
+        return decompressed_bytes
